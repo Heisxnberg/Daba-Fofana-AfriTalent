@@ -1,53 +1,297 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head> 
-<meta charset="UTF-8"> 
-<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-<title>AfriTalent — Accueil</title> 
-<!-- Bootstrap 5 via CDN : feuille de style --> 
-<link 
-href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" 
-rel="stylesheet"> 
-<!-- Votre feuille de style personnelle --> 
-<link rel="stylesheet" href="css/style.css">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AfriTalent — Contact</title>
+
+  <!-- Bootstrap 5 via CDN : feuille de style -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Feuille de style personnelle -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body> 
-<!-- Le contenu de la page sera ajoute ici --> 
-<!-- Bootstrap 5 via CDN : script JavaScript --> 
-<script 
-src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-></script> 
-<!-- Votre script JavaScript --> 
-<script src="js/main.js"></script>
-</body>
-<header><nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">AfriTalent</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navMenu"> 
-  <ul class="navbar-nav ms-auto"> 
-  <li class="nav-item"><a class="nav-link active" 
-  href="index.html">Accueil</a></li> 
- <li class="nav-item"><a class="nav-link" 
- href="freelances.html">Freelances</a></li> 
- <li class="nav-item"><a class="nav-link" 
- href="tarifs.html">Tarifs</a></li> 
- <li class="nav-item"><a class="nav-link" href="about.html">A 
- propos</a></li> 
- <li class="nav-item"><a class="nav-link" 
- href="contact.html">Contact</a></li> 
-      <form class="d-flex" role="Rechercher">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button class="btn btn-outline-success" type="submit">Rechercher</button>
-      </form>
+<body>
+
+<!-- ============================================================
+     NAVBAR — identique sur toutes les pages
+     ============================================================ -->
+<header>
+  <nav id="main-navbar" class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+
+      <!-- Logo -->
+      <a class="navbar-brand" href="index.html">
+        Afri<span>Talent</span>
+      </a>
+
+      <!-- Bouton hamburger mobile -->
+      <button class="navbar-toggler" type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navMenu"
+              aria-controls="navMenu"
+              aria-expanded="false"
+              aria-label="Ouvrir le menu de navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Liens de navigation -->
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto align-items-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+          <li class="nav-item"><a class="nav-link" href="freelances.html">Freelances</a></li>
+          <li class="nav-item"><a class="nav-link" href="tarifs.html">Tarifs</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">À propos</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+
+          <!-- Bouton Dark Mode -->
+          <li class="nav-item">
+            <button id="theme-toggle" class="btn btn-sm ms-2"
+                    aria-label="Passer en mode sombre">
+              <i class="bi bi-moon-fill" aria-hidden="true"></i>
+            </button>
+          </li>
+
+          <!-- Bouton CTA -->
+          <li class="nav-item">
+            <a href="contact.html" class="btn-navbar-cta ms-2">
+              Rejoindre AfriTalent
+            </a>
+          </li>
+        </ul>
+      </div>
+
     </div>
-  </div>
- </nav>
- </ul> 
- </div> 
- </div> 
- </nav> 
+  </nav>
 </header>
-</html
+
+<!-- ============================================================
+     CONTENU PRINCIPAL
+     ============================================================ -->
+<main>
+
+  <!-- En-tête de la page Contact -->
+  <section class="section fade-in-section" style="background-color: var(--color-secondary); padding-top: 7rem; padding-bottom: 3rem;">
+    <div class="container text-center">
+      <span class="section-label">On est là</span>
+      <h1 style="color: #fff; font-family: var(--font-heading);">Contactez-nous</h1>
+      <p style="color: rgba(255,255,255,0.7); max-width: 500px; margin: 0 auto;">
+        Une question, un partenariat ou une candidature ? Écrivez-nous, on répond sous 24h.
+      </p>
+    </div>
+  </section>
+
+  <!-- Formulaire + Infos de contact -->
+  <section class="section fade-in-section">
+    <div class="container">
+      <div class="row gy-5">
+
+        <!-- Colonne formulaire -->
+        <div class="col-lg-7">
+          <div class="contact-form-wrapper">
+            <h2 style="font-family: var(--font-heading); margin-bottom: 1.5rem;">Envoyez-nous un message</h2>
+
+            <!-- Message de succès (caché par défaut avec d-none) -->
+            <div id="form-success" class="d-none" role="alert">
+              <i class="bi bi-check-circle-fill me-2"></i>
+              Message envoyé avec succès ! Nous vous répondrons sous 24h.
+            </div>
+
+            <!-- Formulaire de contact -->
+            <!-- id="contact-form" ciblé par la validation JS -->
+            <form id="contact-form" novalidate>
+
+              <!-- Ligne Nom + Prénom -->
+              <div class="row g-3 mb-3">
+                <div class="col-md-6">
+                  <label for="contact-nom" class="form-label">Nom *</label>
+                  <input type="text"
+                         id="contact-nom"
+                         class="form-control"
+                         placeholder="Votre nom"
+                         autocomplete="family-name">
+                </div>
+                <div class="col-md-6">
+                  <label for="contact-prenom" class="form-label">Prénom *</label>
+                  <input type="text"
+                         id="contact-prenom"
+                         class="form-control"
+                         placeholder="Votre prénom"
+                         autocomplete="given-name">
+                </div>
+              </div>
+
+              <!-- Email -->
+              <div class="mb-3">
+                <label for="contact-email" class="form-label">Adresse email *</label>
+                <input type="email"
+                       id="contact-email"
+                       class="form-control"
+                       placeholder="vous@exemple.com"
+                       autocomplete="email">
+              </div>
+
+              <!-- Sujet -->
+              <div class="mb-3">
+                <label for="contact-sujet" class="form-label">Sujet *</label>
+                <select id="contact-sujet" class="form-select">
+                  <option value="">-- Choisissez un sujet --</option>
+                  <option value="question">Question générale</option>
+                  <option value="partenariat">Partenariat</option>
+                  <option value="candidature">Candidature freelance</option>
+                  <option value="reclamation">Réclamation</option>
+                  <option value="autre">Autre</option>
+                </select>
+              </div>
+
+              <!-- Message -->
+              <div class="mb-4">
+                <label for="contact-message" class="form-label">Message * <span style="font-weight:400; font-size:0.8rem;">(20 caractères minimum)</span></label>
+                <textarea id="contact-message"
+                          class="form-control"
+                          rows="5"
+                          placeholder="Décrivez votre demande en détail..."></textarea>
+              </div>
+
+              <!-- Bouton d'envoi -->
+              <button type="submit" class="btn-contact-submit">
+                <i class="bi bi-send-fill me-2" aria-hidden="true"></i>
+                Envoyer le message
+              </button>
+
+            </form>
+          </div>
+        </div>
+
+        <!-- Colonne informations de contact -->
+        <div class="col-lg-5">
+          <div class="contact-info">
+            <h2 style="font-family: var(--font-heading); margin-bottom: 1.5rem;">Nos coordonnées</h2>
+
+            <div class="contact-info-item">
+              <i class="bi bi-envelope-fill contact-info-icon" aria-hidden="true"></i>
+              <div class="contact-info-text">
+                <strong>Email</strong>
+                <span>contact@afritalent.com</span>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <i class="bi bi-telephone-fill contact-info-icon" aria-hidden="true"></i>
+              <div class="contact-info-text">
+                <strong>Téléphone</strong>
+                <span>+221 77 000 00 00</span>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <i class="bi bi-geo-alt-fill contact-info-icon" aria-hidden="true"></i>
+              <div class="contact-info-text">
+                <strong>Adresse</strong>
+                <span>123 Avenue Cheikh Anta Diop, Dakar, Sénégal</span>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <i class="bi bi-clock-fill contact-info-icon" aria-hidden="true"></i>
+              <div class="contact-info-text">
+                <strong>Horaires</strong>
+                <span>Lun–Ven : 8h00 – 18h00</span>
+              </div>
+            </div>
+
+            <!-- Carte Google Maps -->
+            <div class="contact-map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.123!2d-17.4676!3d14.7167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTTCsDQzJzAwLjEiTiAxN8KwMjgnMDMuNCJX!5e0!3m2!1sfr!2ssn!4v1234567890"
+                title="Localisation AfriTalent sur Google Maps"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+
+          </div>
+        </div>
+
+      </div><!-- /.row -->
+    </div>
+  </section>
+
+</main>
+
+<!-- ============================================================
+     FOOTER — identique sur toutes les pages
+     ============================================================ -->
+<footer class="pt-5 pb-3" style="background-color: var(--color-secondary); color: rgba(255,255,255,0.75);">
+  <div class="container">
+    <div class="row gy-4">
+
+      <div class="col-lg-3 col-md-6">
+        <p class="fw-bold fs-5" style="font-family: var(--font-heading); color: #fff;">
+          Afri<span style="color: var(--color-primary);">Talent</span>
+        </p>
+        <p style="font-size: 0.9rem;">La plateforme de référence pour les freelances tech en Afrique.</p>
+        <div class="d-flex gap-3 mt-2">
+          <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x fs-5" style="color: var(--color-primary);"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin fs-5" style="color: var(--color-primary);"></i></a>
+          <a href="#" aria-label="Instagram"><i class="bi bi-instagram fs-5" style="color: var(--color-primary);"></i></a>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <p class="fw-bold" style="color: #fff;">Liens utiles</p>
+        <ul class="list-unstyled" style="font-size: 0.9rem;">
+          <li><a href="index.html" style="color: rgba(255,255,255,0.7);">Accueil</a></li>
+          <li><a href="freelances.html" style="color: rgba(255,255,255,0.7);">Freelances</a></li>
+          <li><a href="tarifs.html" style="color: rgba(255,255,255,0.7);">Tarifs</a></li>
+          <li><a href="about.html" style="color: rgba(255,255,255,0.7);">À propos</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <p class="fw-bold" style="color: #fff;">Ressources</p>
+        <ul class="list-unstyled" style="font-size: 0.9rem;">
+          <li><a href="blog.html" style="color: rgba(255,255,255,0.7);">Blog</a></li>
+          <li><a href="#" style="color: rgba(255,255,255,0.7);">Guide du freelance</a></li>
+          <li><a href="#" style="color: rgba(255,255,255,0.7);">FAQ</a></li>
+          <li><a href="#" style="color: rgba(255,255,255,0.7);">Conditions d'utilisation</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <p class="fw-bold" style="color: #fff;">Contact</p>
+        <ul class="list-unstyled" style="font-size: 0.9rem;">
+          <li><i class="bi bi-envelope-fill me-2" style="color: var(--color-primary);"></i>contact@afritalent.com</li>
+          <li class="mt-1"><i class="bi bi-telephone-fill me-2" style="color: var(--color-primary);"></i>+221 77 000 00 00</li>
+          <li class="mt-1"><i class="bi bi-geo-alt-fill me-2" style="color: var(--color-primary);"></i>Dakar, Sénégal</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <hr style="border-color: rgba(255,255,255,0.15); margin-top: 2rem;">
+    <p class="text-center mb-0" style="font-size: 0.85rem;">
+      &copy; <span id="year"></span> AfriTalent. Tous droits réservés.
+    </p>
+  </div>
+</footer>
+
+<!-- Bouton retour en haut -->
+<button id="back-to-top" aria-label="Retour en haut de la page">
+  <i class="bi bi-arrow-up" aria-hidden="true"></i>
+</button>
+
+<!-- Bootstrap 5 via CDN : script JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Script JavaScript personnel -->
+<script src="js/main.js"></script>
+<!-- Année dynamique dans le footer -->
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
