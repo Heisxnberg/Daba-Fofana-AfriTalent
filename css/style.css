@@ -373,19 +373,18 @@ p {
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-lg);
 }
- 
- 
-/* =============================================================
+
+/*
    7. SECTION "COMMENT ÇA MARCHE" — BENTO GRID
    CSS Grid asymétrique inspiré du style Bento Box 2026.
    Les cartes n'ont pas toutes la même taille (grid-column/row).
-   ============================================================= */
- 
+  */
+
 /* --- Conteneur de section générique (réutilisable) --- */
 .section {
   padding: var(--spacing-xl) 0;
 }
- 
+
 /* En-tête de section (label + titre + description centrés) */
 .section-header {
   text-align: center;
@@ -412,7 +411,7 @@ p {
   gap: 1.25rem;
 }
  
-/* --- Carte Bento de base --- */
+/*  Carte Bento de base  */
 .bento-card {
   background-color: var(--color-surface);
   border-radius: var(--radius-lg);
@@ -462,9 +461,9 @@ p {
   color: rgba(255, 255, 255, 0.5);
 }
  
-/* --- Contenu interne d'une carte étape --- */
+/*  Contenu interne d'une carte étape  */
  
-/* Numéro d'étape (ex : "01") */
+/* Numéro d'étape */
 .step-number {
   font-family: var(--font-heading);
   font-size: 3.5rem;
@@ -474,7 +473,7 @@ p {
   margin-bottom: var(--spacing-xs);
 }
  
-/* Pour les cartes accent/dark, le numéro est en blanc semi-transparent */
+/* Pour les cartes accent/dark, le numéro blanc semi-transparent */
 .bento-card--accent .step-number,
 .bento-card--dark .step-number {
   color: rgba(255, 255, 255, 0.3);
@@ -487,7 +486,7 @@ p {
   display: block;
 }
  
-/* Petit label au-dessus du titre (ex : "ÉTAPE 1") */
+/* Petit label au-dessus du titre */
 .step-label {
   font-size: 0.75rem;
   font-weight: 600;
@@ -511,22 +510,19 @@ p {
   line-height: 1.65;
   margin-bottom: 0;
 }
- 
- 
-/* =============================================================
-   8. SECTION "CATÉGORIES DE SERVICES"
+
+
+/* SECTION "CATÉGORIES DE SERVICES"
    Grille de cartes avec icône, titre, compteur de freelances.
-   Effets hover CSS : ombre, transformation, changement de couleur.
-   ============================================================= */
- 
-/* --- Grille des catégories (6 cartes) --- */
+   Effets hover CSS : ombre, transformation, changement de couleur. */
+/*  Grille des catégories (6 cartes) */
 .categories-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 colonnes desktop */
   gap: 1.5rem;
 }
- 
-/* --- Carte catégorie --- */
+
+/*  Carte catégorie  */
 .category-card {
   background-color: var(--color-surface);
   border-radius: var(--radius-md);
@@ -543,7 +539,7 @@ p {
               border-color var(--transition-normal);
 }
  
-/* --- Effet hover : ombre + remontée + fond légèrement coloré --- */
+/*  Effet hover : ombre + remontée + fond légèrement coloré */
 .category-card:hover {
   transform: translateY(-6px);
   box-shadow: var(--shadow-lg);
@@ -586,12 +582,9 @@ p {
 }
  
  
-/* =============================================================
-   9. SECTION TÉMOIGNAGES — CAROUSEL BOOTSTRAP PERSONNALISÉ
+/* 9. SECTION TÉMOIGNAGES — CAROUSEL BOOTSTRAP PERSONNALISÉ
    Le .carousel Bootstrap est conservé, on surcharge uniquement
-   l'apparence des slides et des contrôles.
-   ============================================================= */
- 
+   l'apparence des slides et des contrôles. */
 /* --- Fond de la section Témoignages --- */
 .testimonials-section {
   background-color: var(--color-secondary);
@@ -607,7 +600,7 @@ p {
   color: rgba(255, 255, 255, 0.65);
 }
  
-/* --- Carte témoignage (intérieur de chaque slide) --- */
+/* Carte témoignage (intérieur de chaque slide) */
 .testimonial-card {
   background-color: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.12);
@@ -677,7 +670,7 @@ p {
   letter-spacing: 0.1em;
 }
  
-/* --- Personnalisation des contrôles Bootstrap (prev/next) --- */
+/* Personnalisation des contrôles Bootstrap (prev/next) */
 .testimonials-carousel .carousel-control-prev-icon,
 .testimonials-carousel .carousel-control-next-icon {
   background-color: var(--color-primary);
@@ -742,4 +735,200 @@ p {
   background-color: transparent;
   color: #FFFFFF;
   transform: translateY(-2px);
+}
+
+/* commit5 */
+/* Bento Grid : 1 colonne sur mobile */
+.bento-grid {
+  grid-template-columns: 1fr;
+}
+ 
+/* Toutes les cartes Bento : largeur normale (annule span 2/2) */
+.bento-card--wide,
+.bento-card--tall {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+ 
+/* Catégories : 1 colonne sur mobile */
+.categories-grid {
+  grid-template-columns: 1fr;
+}
+ 
+/* Hero : empilé verticalement sur mobile */
+.hero {
+  padding: var(--spacing-lg) 0;
+}
+ 
+.hero-title {
+  font-size: clamp(2.2rem, 10vw, 3rem);
+}
+ 
+.hero-cta-group {
+  flex-direction: column;
+  align-items: flex-start;
+}
+ 
+.hero-stats {
+  gap: var(--spacing-sm);
+}
+ 
+.stat-number {
+  font-size: 1.6rem;
+}
+ 
+/* Carousel témoignages : padding réduit */
+.testimonial-card {
+  padding: var(--spacing-sm);
+}
+ 
+.testimonial-quote::before {
+  display: none; /* Guillemet décoratif trop encombrant sur petit écran */
+}
+ 
+/* Navbar : menu hamburger, liens empilés */
+#main-navbar {
+  height: auto;         /* Hauteur auto quand le menu est ouvert  */
+  min-height: var(--navbar-height);
+}
+ 
+/* On retire le padding-top du body calculé sur navbar fixe
+   car la hauteur varie quand le menu mobile est ouvert.
+   Bootstrap gère le collapse — on se contente d'un minimum. */
+body {
+  padding-top: var(--navbar-height);
+}
+ 
+/* Section padding réduit sur mobile */
+.section {
+  padding: var(--spacing-lg) 0;
+}
+ 
+.cta-section {
+  padding: var(--spacing-lg) 0;
+}
+ 
+.testimonials-section {
+  padding: var(--spacing-lg) 0;
+}
+ 
+/* Boutons hero pleine largeur sur très petit écran */
+.btn-hero-primary,
+.btn-hero-secondary {
+  width: 100%;
+  text-align: center;
+}
+ 
+ 
+/*  TABLETTE (≥ 576px) — petite tablette / grand téléphone */
+@media (min-width: 576px) {
+ 
+  /* Catégories : 2 colonnes */
+  .categories-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+ 
+  /* Boutons hero : côte à côte à nouveau */
+  .btn-hero-primary,
+  .btn-hero-secondary {
+    width: auto;
+  }
+ 
+  .hero-cta-group {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+ 
+ 
+/* TABLETTE (≥ 768px) — tablette standard */
+@media (min-width: 768px) {
+ 
+  /* Bento Grid : 2 colonnes sur tablette */
+  .bento-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+ 
+  /* Les cartes wide reprennent leur largeur double */
+  .bento-card--wide {
+    grid-column: span 2;
+  }
+ 
+  /* Catégories : 2 colonnes (déjà fait à 576px, on confirme) */
+  .categories-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+ 
+  /* Hero : stat-number plus grand */
+  .stat-number {
+    font-size: 1.8rem;
+  }
+ 
+  /* Navbar : hauteur fixe rétablie (le menu collapse est caché) */
+  #main-navbar {
+    height: var(--navbar-height);
+  }
+ 
+  /* Témoignage : padding restauré */
+  .testimonial-card {
+    padding: var(--spacing-md) var(--spacing-md);
+  }
+ 
+  .testimonial-quote::before {
+    display: block; /* Guillemet décoratif réactivé */
+  }
+}
+ 
+ 
+/* DESKTOP (≥ 992px) — col-lg Bootstrap */
+@media (min-width: 992px) {
+ 
+  /* Bento Grid : 3 colonnes intermédiaires */
+  .bento-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+ 
+  /* Catégories : 3 colonnes */
+  .categories-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+ 
+  /* Hero : padding vertical rétabli */
+  .hero {
+    padding: var(--spacing-xl) 0;
+  }
+ 
+  /* Stat number taille desktop */
+  .stat-number {
+    font-size: 2rem;
+  }
+}
+ 
+ 
+/* LARGE DESKTOP (≥ 1200px) */
+@media (min-width: 1200px) {
+ 
+  /* Bento Grid : 4 colonnes */
+  .bento-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+ 
+  /* Les cartes wide/tall reprennent leurs spans complets */
+  .bento-card--wide {
+    grid-column: span 2;
+  }
+ 
+  .bento-card--tall {
+    grid-row: span 2;
+  }
+ 
+  /* Catégories : 3 colonnes  */
+  .categories-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+ 
+  /* Témoignage : padding maximal */
+  .testimonial-card {
+    padding: var(--spacing-md) var(--spacing-lg);
+  }
 }
