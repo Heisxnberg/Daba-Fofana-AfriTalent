@@ -1,53 +1,265 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head> 
-<meta charset="UTF-8"> 
-<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-<title>AfriTalent — Accueil</title> 
-<!-- Bootstrap 5 via CDN : feuille de style --> 
-<link 
-href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" 
-rel="stylesheet"> 
-<!-- Votre feuille de style personnelle --> 
-<link rel="stylesheet" href="css/style.css">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AfriTalent — À propos</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body> 
-<!-- Le contenu de la page sera ajoute ici --> 
-<!-- Bootstrap 5 via CDN : script JavaScript --> 
-<script 
-src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-></script> 
-<!-- Votre script JavaScript --> 
-<script src="js/main.js"></script>
-</body>
-<header><nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">AfriTalent</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navMenu"> 
-  <ul class="navbar-nav ms-auto"> 
-  <li class="nav-item"><a class="nav-link active" 
-  href="index.html">Accueil</a></li> 
- <li class="nav-item"><a class="nav-link" 
- href="freelances.html">Freelances</a></li> 
- <li class="nav-item"><a class="nav-link" 
- href="tarifs.html">Tarifs</a></li> 
- <li class="nav-item"><a class="nav-link" href="about.html">A 
- propos</a></li> 
- <li class="nav-item"><a class="nav-link" 
- href="contact.html">Contact</a></li> 
-      <form class="d-flex" role="Rechercher">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button class="btn btn-outline-success" type="submit">Rechercher</button>
-      </form>
+<body>
+ 
+<header>
+  <nav id="main-navbar" class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Afri<span>Talent</span></a>
+      <button class="navbar-toggler" type="button"
+              data-bs-toggle="collapse" data-bs-target="#navMenu"
+              aria-controls="navMenu" aria-expanded="false"
+              aria-label="Ouvrir le menu de navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto align-items-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+          <li class="nav-item"><a class="nav-link" href="freelances.html">Freelances</a></li>
+          <li class="nav-item"><a class="nav-link" href="tarifs.html">Tarifs</a></li>
+          <li class="nav-item"><a class="nav-link active" href="about.html">À propos</a></li>
+          <li class="nav-item"><a class="nav-link" href="tarifs.html#faq">FAQ</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item">
+            <button id="theme-toggle" class="btn btn-sm ms-2" aria-label="Passer en mode sombre">
+              <i class="bi bi-moon-fill" aria-hidden="true"></i>
+            </button>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="btn-navbar-cta ms-2">Rejoindre AfriTalent</a>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
- </nav>
- </ul> 
- </div> 
- </div> 
- </nav> 
+  </nav>
 </header>
-</html
+ 
+<main>
+ 
+  <!-- En-tête -->
+  <section class="section" style="background-color: var(--color-secondary); padding-top: 7rem; padding-bottom: 3rem;">
+    <div class="container text-center">
+      <span class="section-label">Notre histoire</span>
+      <h1 style="color: #fff; font-family: var(--font-heading);">À propos d'AfriTalent</h1>
+      <p style="color: rgba(255,255,255,0.7); max-width: 560px; margin: 0 auto;">
+        Née à Dakar en 2023, AfriTalent connecte les meilleurs talents tech africains aux opportunités mondiales.
+      </p>
+    </div>
+  </section>
+ 
+  <!-- Notre Histoire -->
+  <section class="section fade-in-section">
+    <div class="container">
+      <div class="row align-items-center gy-5">
+        <div class="col-lg-6">
+          <span class="section-label">Nos origines</span>
+          <h2>Notre Histoire</h2>
+          <p>AfriTalent est née d'un constat simple : l'Afrique regorge de talents tech exceptionnels, mais ceux-ci manquent d'une plateforme fiable pour se connecter aux entreprises locales et internationales.</p>
+          <p>Fondée en 2023 à Dakar par une équipe de passionnés du numérique, AfriTalent s'est donnée pour mission de valoriser le talent africain et d'accélérer la transformation digitale du continent.</p>
+          <p>Aujourd'hui, nous fédérons plus de 2 500 freelances dans 45 pays et avons facilité plus de 12 000 missions réussies.</p>
+        </div>
+        <div class="col-lg-6 text-center">
+          <img src="images/Ordinateur.webp"
+               alt="L'équipe AfriTalent au travail"
+               style="width: 100%; max-width: 480px; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);">
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- L'équipe -->
+  <section class="section fade-in-section" style="background-color: var(--color-bg);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Les visages</span>
+        <h2>Notre Équipe</h2>
+        <p>Une équipe diversifiée, passionnée et engagée pour l'Afrique numérique.</p>
+      </div>
+      <div class="row gy-4 justify-content-center">
+ 
+        <div class="col-lg-3 col-md-6 text-center">
+          <div style="background: var(--color-surface); border-radius: var(--radius-md); padding: 2rem 1rem; box-shadow: var(--shadow-sm);">
+            <img src="images/Mamadou.webp" alt="Mamadou Fall"
+                 style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 3px solid var(--color-primary); margin-bottom: 1rem;">
+            <h4 style="font-family: var(--font-heading);">Mamadou Fall</h4>
+            <p style="color: var(--color-primary); font-size: 0.9rem; font-weight: 600;">CEO & Co-fondateur</p>
+            <div class="d-flex justify-content-center gap-2 mt-2">
+              <a href="#" aria-label="LinkedIn de Mamadou"><i class="bi bi-linkedin" style="color: var(--color-primary);"></i></a>
+              <a href="#" aria-label="Twitter de Mamadou"><i class="bi bi-twitter-x" style="color: var(--color-primary);"></i></a>
+            </div>
+          </div>
+        </div>
+ 
+        <div class="col-lg-3 col-md-6 text-center">
+          <div style="background: var(--color-surface); border-radius: var(--radius-md); padding: 2rem 1rem; box-shadow: var(--shadow-sm);">
+            <img src="images/Fatou.webp" alt="Fatou Sarr"
+                 style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 3px solid var(--color-primary); margin-bottom: 1rem;">
+            <h4 style="font-family: var(--font-heading);">Fatou Sarr</h4>
+            <p style="color: var(--color-primary); font-size: 0.9rem; font-weight: 600;">CTO & Co-fondatrice</p>
+            <div class="d-flex justify-content-center gap-2 mt-2">
+              <a href="#" aria-label="LinkedIn de Fatou"><i class="bi bi-linkedin" style="color: var(--color-primary);"></i></a>
+              <a href="#" aria-label="Twitter de Fatou"><i class="bi bi-twitter-x" style="color: var(--color-primary);"></i></a>
+            </div>
+          </div>
+        </div>
+ 
+        <div class="col-lg-3 col-md-6 text-center">
+          <div style="background: var(--color-surface); border-radius: var(--radius-md); padding: 2rem 1rem; box-shadow: var(--shadow-sm);">
+            <img src="images/Kofi.webp" alt="Kofi Asante"
+                 style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 3px solid var(--color-primary); margin-bottom: 1rem;">
+            <h4 style="font-family: var(--font-heading);">Kofi Asante</h4>
+            <p style="color: var(--color-primary); font-size: 0.9rem; font-weight: 600;">Directeur Produit</p>
+            <div class="d-flex justify-content-center gap-2 mt-2">
+              <a href="#" aria-label="LinkedIn de Kofi"><i class="bi bi-linkedin" style="color: var(--color-primary);"></i></a>
+              <a href="#" aria-label="Twitter de Kofi"><i class="bi bi-twitter-x" style="color: var(--color-primary);"></i></a>
+            </div>
+          </div>
+        </div>
+ 
+        <div class="col-lg-3 col-md-6 text-center">
+          <div style="background: var(--color-surface); border-radius: var(--radius-md); padding: 2rem 1rem; box-shadow: var(--shadow-sm);">
+            <img src="images/Aissatou.webp" alt="Aissatou Diallo"
+                 style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 3px solid var(--color-primary); margin-bottom: 1rem;">
+            <h4 style="font-family: var(--font-heading);">Aissatou Diallo</h4>
+            <p style="color: var(--color-primary); font-size: 0.9rem; font-weight: 600;">Directrice Marketing</p>
+            <div class="d-flex justify-content-center gap-2 mt-2">
+              <a href="#" aria-label="LinkedIn de Aissatou"><i class="bi bi-linkedin" style="color: var(--color-primary);"></i></a>
+              <a href="#" aria-label="Twitter de Aissatou"><i class="bi bi-twitter-x" style="color: var(--color-primary);"></i></a>
+            </div>
+          </div>
+        </div>
+ 
+      </div>
+    </div>
+  </section>
+ 
+  <!-- Nos valeurs -->
+  <section class="section fade-in-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Ce qui nous guide</span>
+        <h2>Nos Valeurs</h2>
+      </div>
+      <div class="row gy-4">
+        <div class="col-md-3 col-sm-6 text-center">
+          <div style="padding: 2rem 1rem;">
+            <i class="bi bi-lightbulb-fill" style="font-size: 2.5rem; color: var(--color-primary);"></i>
+            <h4 style="font-family: var(--font-heading); margin-top: 1rem;">Innovation</h4>
+            <p style="font-size: 0.9rem; color: var(--color-text);">Nous adoptons les dernières technologies pour offrir la meilleure expérience.</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6 text-center">
+          <div style="padding: 2rem 1rem;">
+            <i class="bi bi-people-fill" style="font-size: 2.5rem; color: var(--color-primary);"></i>
+            <h4 style="font-family: var(--font-heading); margin-top: 1rem;">Communauté</h4>
+            <p style="font-size: 0.9rem; color: var(--color-text);">Nous croyons en la force du collectif et du partage entre freelances africains.</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6 text-center">
+          <div style="padding: 2rem 1rem;">
+            <i class="bi bi-globe-africa" style="font-size: 2.5rem; color: var(--color-primary);"></i>
+            <h4 style="font-family: var(--font-heading); margin-top: 1rem;">Accessibilité</h4>
+            <p style="font-size: 0.9rem; color: var(--color-text);">Notre plateforme est accessible à tous, quelle que soit la région du continent.</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6 text-center">
+          <div style="padding: 2rem 1rem;">
+            <i class="bi bi-trophy-fill" style="font-size: 2.5rem; color: var(--color-primary);"></i>
+            <h4 style="font-family: var(--font-heading); margin-top: 1rem;">Excellence</h4>
+            <p style="font-size: 0.9rem; color: var(--color-text);">Nous exigeons le meilleur de nous-mêmes pour valoriser le talent africain.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- Chiffres clés — Bento Grid avec compteurs JS -->
+  <section class="section fade-in-section" style="background-color: var(--color-secondary);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label" style="color: var(--color-primary);">En chiffres</span>
+        <h2 style="color: #fff;">AfriTalent en chiffres</h2>
+      </div>
+      <div class="bento-grid">
+        <div class="bento-card bento-card--dark bento-card--wide text-center">
+          <span class="stat-number" data-target="2500" style="font-size: 3rem;">0</span>
+          <span class="stat-label">Freelances actifs</span>
+        </div>
+        <div class="bento-card bento-card--accent text-center">
+          <span class="stat-number" data-target="45" style="font-size: 3rem;">0</span>
+          <span class="stat-label" style="color: rgba(255,255,255,0.8);">Pays représentés</span>
+        </div>
+        <div class="bento-card bento-card--dark text-center">
+          <span class="stat-number" data-target="800" style="font-size: 3rem;">0</span>
+          <span class="stat-label">Entreprises clientes</span>
+        </div>
+        <div class="bento-card bento-card--dark text-center">
+          <span class="stat-number" data-target="12000" style="font-size: 3rem;">0</span>
+          <span class="stat-label">Missions réalisées</span>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+</main>
+ 
+<footer class="pt-5 pb-3" style="background-color: var(--color-secondary); color: rgba(255,255,255,0.75);">
+  <div class="container">
+    <div class="row gy-4">
+      <div class="col-lg-3 col-md-6">
+        <p class="fw-bold fs-5" style="font-family: var(--font-heading); color: #fff;">Afri<span style="color: var(--color-primary);">Talent</span></p>
+        <p style="font-size: 0.9rem;">La plateforme de référence pour les freelances tech en Afrique.</p>
+        <div class="d-flex gap-3 mt-2">
+          <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x fs-5" style="color: var(--color-primary);"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin fs-5" style="color: var(--color-primary);"></i></a>
+          <a href="#" aria-label="Instagram"><i class="bi bi-instagram fs-5" style="color: var(--color-primary);"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <p class="fw-bold" style="color: #fff;">Liens utiles</p>
+        <ul class="list-unstyled" style="font-size: 0.9rem;">
+          <li><a href="index.html" style="color: rgba(255,255,255,0.7);">Accueil</a></li>
+          <li><a href="freelances.html" style="color: rgba(255,255,255,0.7);">Freelances</a></li>
+          <li><a href="tarifs.html" style="color: rgba(255,255,255,0.7);">Tarifs</a></li>
+          <li><a href="about.html" style="color: rgba(255,255,255,0.7);">À propos</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <p class="fw-bold" style="color: #fff;">Ressources</p>
+        <ul class="list-unstyled" style="font-size: 0.9rem;">
+          <li><a href="tarifs.html#faq" style="color: rgba(255,255,255,0.7);">FAQ</a></li>
+          <li><a href="#" style="color: rgba(255,255,255,0.7);">Guide du freelance</a></li>
+          <li><a href="#" style="color: rgba(255,255,255,0.7);">Conditions d'utilisation</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <p class="fw-bold" style="color: #fff;">Contact</p>
+        <ul class="list-unstyled" style="font-size: 0.9rem;">
+          <li><i class="bi bi-envelope-fill me-2" style="color: var(--color-primary);"></i>contact@afritalent.com</li>
+          <li class="mt-1"><i class="bi bi-telephone-fill me-2" style="color: var(--color-primary);"></i>+221 77 000 00 00</li>
+          <li class="mt-1"><i class="bi bi-geo-alt-fill me-2" style="color: var(--color-primary);"></i>Dakar, Sénégal</li>
+        </ul>
+      </div>
+    </div>
+    <hr style="border-color: rgba(255,255,255,0.15); margin-top: 2rem;">
+    <p class="text-center mb-0" style="font-size: 0.85rem;">&copy; <span id="year"></span> AfriTalent. Tous droits réservés.</p>
+  </div>
+</footer>
+ 
+<button id="back-to-top" aria-label="Retour en haut de la page">
+  <i class="bi bi-arrow-up" aria-hidden="true"></i>
+</button>
+ 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

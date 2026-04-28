@@ -794,7 +794,7 @@ p {
  
 /* On retire le padding-top du body calculé sur navbar fixe
    car la hauteur varie quand le menu mobile est ouvert.
-   Bootstrap gère le collapse — on se contente d'un minimum. */
+   Bootstrap gère le collapse — on se contente d'un minimum. (expliquation selon mes recherches et les explications de l'IA) */
 body {
   padding-top: var(--navbar-height);
 }
@@ -931,4 +931,122 @@ body {
   .testimonial-card {
     padding: var(--spacing-md) var(--spacing-lg);
   }
+}
+
+/* debut commit 6 */
+
+body.dark-mode {
+  --color-bg:      #0F172A;   /* Fond très sombre (bleu nuit profond)   */
+  --color-surface: #1E293B;   /* Surface des cartes en dark             */
+  --color-text:    #CBD5E1;   /* Texte clair sur fond sombre            */
+  --color-secondary: #1E293B; /* Navbar reste sombre (inchangée)        */
+}
+ 
+/* Textes blancs qui deviennent lisibles sur fond sombre */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4 {
+  color: #F1F5F9;
+}
+ 
+body.dark-mode p {
+  color: var(--color-text);
+}
+ 
+/* Cartes en dark mode */
+body.dark-mode .bento-card,
+body.dark-mode .category-card {
+  background-color: var(--color-surface);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+ 
+body.dark-mode .category-card:hover {
+  background-color: #2D3748;
+  border-color: var(--color-primary);
+}
+ 
+/* Textes de la section hero (déjà sombres, peu de changement nécessaire) */
+body.dark-mode .hero {
+  background-color: #080F1E; /* Encore plus sombre en dark mode */
+}
+ 
+/* Inputs du formulaire en dark mode */
+body.dark-mode .form-control,
+body.dark-mode .form-select {
+  background-color: #1E293B;
+  border-color: rgba(255, 255, 255, 0.15);
+  color: #F1F5F9;
+}
+ 
+body.dark-mode .form-control:focus,
+body.dark-mode .form-select:focus {
+  background-color: #1E293B;
+  color: #F1F5F9;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.25);
+}
+ 
+/* Placeholder en dark mode */
+body.dark-mode .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.35);
+}
+ 
+/* Section témoignages : fond encore plus sombre */
+body.dark-mode .testimonials-section {
+  background-color: #080F1E;
+}
+ 
+/* Section CTA : inchangée (fond orange, reste lisible) */
+ 
+/* Footer en dark mode */
+body.dark-mode footer {
+  background-color: #080F1E;
+}
+ 
+/* BOUTON "RETOUR EN HAUT" Caché par défaut, apparaît quand le JS lui ajoute .visible.
+Position fixe en bas à droite. */
+ 
+#back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 999;
+ 
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+ 
+  background-color: var(--color-primary);
+  color: #FFFFFF;
+  border: none;
+  font-size: 1.2rem;
+ 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+  box-shadow: var(--shadow-md);
+  cursor: pointer;
+ 
+  /* Caché par défaut : opacity 0 + décalé vers le bas */
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none; /* Non cliquable quand invisible */
+ 
+  transition: opacity var(--transition-normal),
+              transform var(--transition-normal),
+              background-color var(--transition-fast);
+}
+ 
+/* Visible quand le JS ajoute la classe .visible */
+#back-to-top.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto; /* Cliquable */
+}
+ 
+#back-to-top:hover {
+  background-color: #ea6b0f;
+  transform: translateY(-3px);
 }

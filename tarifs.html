@@ -1,53 +1,276 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head> 
-<meta charset="UTF-8"> 
-<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-<title>AfriTalent — Accueil</title> 
-<!-- Bootstrap 5 via CDN : feuille de style --> 
-<link 
-href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" 
-rel="stylesheet"> 
-<!-- Votre feuille de style personnelle --> 
-<link rel="stylesheet" href="css/style.css">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AfriTalent — Tarifs</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body> 
-<!-- Le contenu de la page sera ajoute ici --> 
-<!-- Bootstrap 5 via CDN : script JavaScript --> 
-<script 
-src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-></script> 
-<!-- Votre script JavaScript --> 
-<script src="js/main.js"></script>
-</body>
-<header><nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">AfriTalent</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navMenu"> 
-  <ul class="navbar-nav ms-auto"> 
-  <li class="nav-item"><a class="nav-link active" 
-  href="index.html">Accueil</a></li> 
- <li class="nav-item"><a class="nav-link" 
- href="freelances.html">Freelances</a></li> 
- <li class="nav-item"><a class="nav-link" 
- href="tarifs.html">Tarifs</a></li> 
- <li class="nav-item"><a class="nav-link" href="about.html">A 
- propos</a></li> 
- <li class="nav-item"><a class="nav-link" 
- href="contact.html">Contact</a></li> 
-      <form class="d-flex" role="Rechercher">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button class="btn btn-outline-success" type="submit">Rechercher</button>
-      </form>
+<body>
+ 
+<header>
+  <nav id="main-navbar" class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Afri<span>Talent</span></a>
+      <button class="navbar-toggler" type="button"
+              data-bs-toggle="collapse" data-bs-target="#navMenu"
+              aria-controls="navMenu" aria-expanded="false"
+              aria-label="Ouvrir le menu de navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto align-items-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+          <li class="nav-item"><a class="nav-link" href="freelances.html">Freelances</a></li>
+          <li class="nav-item"><a class="nav-link active" href="tarifs.html">Tarifs</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">À propos</a></li>
+          <li class="nav-item"><a class="nav-link" href="tarifs.html#faq">FAQ</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item">
+            <button id="theme-toggle" class="btn btn-sm ms-2" aria-label="Passer en mode sombre">
+              <i class="bi bi-moon-fill" aria-hidden="true"></i>
+            </button>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="btn-navbar-cta ms-2">Rejoindre AfriTalent</a>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
- </nav>
- </ul> 
- </div> 
- </div> 
- </nav> 
+  </nav>
 </header>
-</html
+ 
+<main>
+ 
+  <!-- En-tête -->
+  <section class="section" style="background-color: var(--color-secondary); padding-top: 7rem; padding-bottom: 3rem;">
+    <div class="container text-center">
+      <span class="section-label">Nos offres</span>
+      <h1 style="color: #fff; font-family: var(--font-heading);">Plans & Tarification</h1>
+      <p style="color: rgba(255,255,255,0.7); max-width: 500px; margin: 0 auto;">
+        Choisissez le plan adapté à vos besoins. Sans engagement, modifiable à tout moment.
+      </p>
+    </div>
+  </section>
+ 
+  <!-- Plans tarifaires -->
+  <section class="section fade-in-section">
+    <div class="container">
+      <div class="row gy-4 justify-content-center">
+ 
+        <!-- Plan Gratuit -->
+        <div class="col-lg-4 col-md-6">
+          <div class="card h-100 border-0 shadow-sm" style="border-radius: var(--radius-md);">
+            <div class="card-body p-4">
+              <h3 style="font-family: var(--font-heading); color: var(--color-secondary);">Gratuit</h3>
+              <p class="text-muted mb-3">Pour démarrer</p>
+              <div class="mb-4">
+                <span style="font-size: 2.5rem; font-weight: 800; color: var(--color-secondary);">0 €</span>
+                <span class="text-muted">/mois</span>
+              </div>
+              <ul class="list-unstyled mb-4">
+                <li class="mb-2"><i class="bi bi-check-circle-fill me-2" style="color: var(--color-primary);"></i>Profil freelance basique</li>
+                <li class="mb-2"><i class="bi bi-check-circle-fill me-2" style="color: var(--color-primary);"></i>5 candidatures/mois</li>
+                <li class="mb-2"><i class="bi bi-check-circle-fill me-2" style="color: var(--color-primary);"></i>Accès au catalogue</li>
+                <li class="mb-2 text-muted"><i class="bi bi-x-circle me-2"></i>Mise en avant du profil</li>
+                <li class="mb-2 text-muted"><i class="bi bi-x-circle me-2"></i>Support prioritaire</li>
+                <li class="mb-2 text-muted"><i class="bi bi-x-circle me-2"></i>Statistiques avancées</li>
+              </ul>
+              <a href="contact.html" class="btn btn-outline-secondary w-100" style="border-radius: var(--radius-sm);">Commencer</a>
+            </div>
+          </div>
+        </div>
+ 
+        <!-- Plan Pro — mis en avant -->
+        <div class="col-lg-4 col-md-6">
+          <div class="card h-100 border-0 position-relative"
+               style="border-radius: var(--radius-md); background-color: var(--color-secondary); transform: scale(1.04); box-shadow: 0 12px 40px rgba(0,0,0,0.2);">
+            <!-- Badge Populaire -->
+            <span class="position-absolute top-0 start-50 translate-middle badge"
+                  style="background-color: var(--color-primary); border-radius: 99px; padding: 0.4rem 1rem; font-size: 0.8rem;">
+              ⭐ Populaire
+            </span>
+            <div class="card-body p-4 pt-5">
+              <h3 style="font-family: var(--font-heading); color: #fff;">Pro</h3>
+              <p style="color: rgba(255,255,255,0.6);" class="mb-3">Pour les freelances actifs</p>
+              <div class="mb-4">
+                <span style="font-size: 2.5rem; font-weight: 800; color: var(--color-primary);">19 €</span>
+                <span style="color: rgba(255,255,255,0.6);">/mois</span>
+              </div>
+              <ul class="list-unstyled mb-4">
+                <li class="mb-2" style="color: #fff;"><i class="bi bi-check-circle-fill me-2" style="color: var(--color-primary);"></i>Profil freelance complet</li>
+                <li class="mb-2" style="color: #fff;"><i class="bi bi-check-circle-fill me-2" style="color: var(--color-primary);"></i>Candidatures illimitées</li>
+                <li class="mb-2" style="color: #fff;"><i class="bi bi-check-circle-fill me-2" style="color: var(--color-primary);"></i>Mise en avant du profil</li>
+                <li class="mb-2" style="color: #fff;"><i class="bi bi-check-circle-fill me-2" style="color: var(--color-primary);"></i>Support prioritaire</li>
+                <li class="mb-2" style="color: rgba(255,255,255,0.4);"><i class="bi bi-x-circle me-2"></i>Tableau de bord entreprise</li>
+                <li class="mb-2" style="color: rgba(255,255,255,0.4);"><i class="bi bi-x-circle me-2"></i>API dédiée</li>
+              </ul>
+              <a href="contact.html" class="btn w-100" style="background-color: var(--color-primary); color: #fff; border-radius: var(--radius-sm);">Choisir Pro</a>
+            </div>
+          </div>
+        </div>
+ 
+        <!-- Plan Entreprise -->
+        <div class="col-lg-4 col-md-6">
+          <div class="card h-100 border-0 shadow-sm" style="border-radius: var(--radius-md);">
+            <div class="card-body p-4">
+              <h3 style="font-family: var(--font-heading); color: var(--color-secondary);">Entreprise</h3>
+              <p class="text-muted mb-3">Pour les grandes équipes</p>
+              <div class="mb-4">
+                <span style="font-size: 2.5rem; font-weight: 800; color: var(--color-secondary);">99 €</span>
+                <span class="text-muted">/mois</span>
+              </div>
+              <ul class="list-unstyled mb-4">
+                <li class="mb-2"><i class="bi bi-check-circle-fill me-2" style="color: var(--color-primary);"></i>Tout le plan Pro</li>
+                <li class="mb-2"><i class="bi bi-check-circle-fill me-2" style="color: var(--color-primary);"></i>Tableau de bord entreprise</li>
+                <li class="mb-2"><i class="bi bi-check-circle-fill me-2" style="color: var(--color-primary);"></i>API dédiée</li>
+                <li class="mb-2"><i class="bi bi-check-circle-fill me-2" style="color: var(--color-primary);"></i>Manager de compte dédié</li>
+                <li class="mb-2"><i class="bi bi-check-circle-fill me-2" style="color: var(--color-primary);"></i>Statistiques avancées</li>
+                <li class="mb-2"><i class="bi bi-check-circle-fill me-2" style="color: var(--color-primary);"></i>Contrats personnalisés</li>
+              </ul>
+              <a href="contact.html" class="btn w-100" style="background-color: var(--color-secondary); color: #fff; border-radius: var(--radius-sm);">Nous contacter</a>
+            </div>
+          </div>
+        </div>
+ 
+      </div>
+    </div>
+  </section>
+ 
+  <!-- FAQ Accordion Bootstrap -->
+  <section id="faq" class="section fade-in-section" style="background-color: var(--color-bg);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Questions fréquentes</span>
+        <h2>FAQ</h2>
+        <p>Tout ce que vous devez savoir sur AfriTalent.</p>
+      </div>
+ 
+      <!-- id="faqAccordion" requis par Bootstrap pour l'ouverture/fermeture -->
+      <div class="accordion" id="faqAccordion" style="max-width: 800px; margin: 0 auto;">
+ 
+        <div class="accordion-item border-0 mb-3" style="border-radius: var(--radius-md); overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+          <h2 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true">
+              Comment créer mon profil freelance ?
+            </button>
+          </h2>
+          <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Cliquez sur "Rejoindre AfriTalent", renseignez vos informations personnelles, vos compétences et votre portfolio. Votre profil sera visible en moins de 24h après validation.
+            </div>
+          </div>
+        </div>
+ 
+        <div class="accordion-item border-0 mb-3" style="border-radius: var(--radius-md); overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false">
+              Comment sont vérifiés les freelances ?
+            </button>
+          </h2>
+          <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Chaque profil est vérifié manuellement par notre équipe. Nous contrôlons les compétences, les références et le portfolio avant de valider un compte. Les freelances certifiés affichent un badge de confiance.
+            </div>
+          </div>
+        </div>
+ 
+        <div class="accordion-item border-0 mb-3" style="border-radius: var(--radius-md); overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false">
+              Peut-on changer de plan à tout moment ?
+            </button>
+          </h2>
+          <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Oui, vous pouvez passer d'un plan à un autre à tout moment depuis votre espace personnel. Le changement prend effet immédiatement et la facturation est ajustée au prorata.
+            </div>
+          </div>
+        </div>
+ 
+        <div class="accordion-item border-0 mb-3" style="border-radius: var(--radius-md); overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false">
+              Quels moyens de paiement sont acceptés ?
+            </button>
+          </h2>
+          <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              AfriTalent accepte les cartes bancaires (Visa, Mastercard), les virements bancaires, ainsi que les paiements mobiles populaires en Afrique (Orange Money, Wave, MTN Mobile Money).
+            </div>
+          </div>
+        </div>
+ 
+        <div class="accordion-item border-0 mb-3" style="border-radius: var(--radius-md); overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5" aria-expanded="false">
+              Y a-t-il une commission sur les missions ?
+            </button>
+          </h2>
+          <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Pour le plan Gratuit, une commission de 10% est prélevée sur chaque mission. Les plans Pro et Entreprise bénéficient d'une commission réduite à 5%, incluse dans l'abonnement mensuel.
+            </div>
+          </div>
+        </div>
+ 
+      </div>
+    </div>
+  </section>
+ 
+</main>
+ 
+<footer class="pt-5 pb-3" style="background-color: var(--color-secondary); color: rgba(255,255,255,0.75);">
+  <div class="container">
+    <div class="row gy-4">
+      <div class="col-lg-3 col-md-6">
+        <p class="fw-bold fs-5" style="font-family: var(--font-heading); color: #fff;">Afri<span style="color: var(--color-primary);">Talent</span></p>
+        <p style="font-size: 0.9rem;">La plateforme de référence pour les freelances tech en Afrique.</p>
+        <div class="d-flex gap-3 mt-2">
+          <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x fs-5" style="color: var(--color-primary);"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin fs-5" style="color: var(--color-primary);"></i></a>
+          <a href="#" aria-label="Instagram"><i class="bi bi-instagram fs-5" style="color: var(--color-primary);"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <p class="fw-bold" style="color: #fff;">Liens utiles</p>
+        <ul class="list-unstyled" style="font-size: 0.9rem;">
+          <li><a href="index.html" style="color: rgba(255,255,255,0.7);">Accueil</a></li>
+          <li><a href="freelances.html" style="color: rgba(255,255,255,0.7);">Freelances</a></li>
+          <li><a href="tarifs.html" style="color: rgba(255,255,255,0.7);">Tarifs</a></li>
+          <li><a href="about.html" style="color: rgba(255,255,255,0.7);">À propos</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <p class="fw-bold" style="color: #fff;">Ressources</p>
+        <ul class="list-unstyled" style="font-size: 0.9rem;">
+          <li><a href="tarifs.html#faq" style="color: rgba(255,255,255,0.7);">FAQ</a></li>
+          <li><a href="#" style="color: rgba(255,255,255,0.7);">Guide du freelance</a></li>
+          <li><a href="#" style="color: rgba(255,255,255,0.7);">Conditions d'utilisation</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <p class="fw-bold" style="color: #fff;">Contact</p>
+        <ul class="list-unstyled" style="font-size: 0.9rem;">
+          <li><i class="bi bi-envelope-fill me-2" style="color: var(--color-primary);"></i>contact@afritalent.com</li>
+          <li class="mt-1"><i class="bi bi-telephone-fill me-2" style="color: var(--color-primary);"></i>+221 77 000 00 00</li>
+          <li class="mt-1"><i class="bi bi-geo-alt-fill me-2" style="color: var(--color-primary);"></i>Dakar, Sénégal</li>
+        </ul>
+      </div>
+    </div>
+    <hr style="border-color: rgba(255,255,255,0.15); margin-top: 2rem;">
+    <p class="text-center mb-0" style="font-size: 0.85rem;">&copy; <span id="year"></span> AfriTalent. Tous droits réservés.</p>
+  </div>
+</footer>
+ 
+<button id="back-to-top" aria-label="Retour en haut de la page">
+  <i class="bi bi-arrow-up" aria-hidden="true"></i>
+</button>
+ 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

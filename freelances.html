@@ -1,135 +1,251 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head> 
-<meta charset="UTF-8"> 
-<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-<title>AfriTalent — Accueil</title> 
-<!-- Bootstrap 5 via CDN : feuille de style --> 
-<link 
-href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" 
-rel="stylesheet"> 
-<!-- Votre feuille de style personnelle --> 
-<link rel="stylesheet" href="css/style.css">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AfriTalent — Freelances</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body> 
-<!-- Le contenu de la page sera ajoute ici --> 
-<!-- Bootstrap 5 via CDN : script JavaScript --> 
-<script 
-src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-></script> 
-<!-- Votre script JavaScript --> 
-<script src="js/main.js"></script>
-</body>
-<header><nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">AfriTalent</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navMenu"> 
-  <ul class="navbar-nav ms-auto"> 
-  <li class="nav-item"><a class="nav-link active" 
-  href="index.html">Accueil</a></li> 
- <li class="nav-item"><a class="nav-link" 
- href="freelances.html">Freelances</a></li> 
- <li class="nav-item"><a class="nav-link" 
- href="tarifs.html">Tarifs</a></li> 
- <li class="nav-item"><a class="nav-link" href="about.html">A 
- propos</a></li> 
- <li class="nav-item"><a class="nav-link" 
- href="contact.html">Contact</a></li> 
-      <form class="d-flex" role="Rechercher">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button class="btn btn-outline-success" type="submit">Rechercher</button>
-      </form>
+<body>
+ 
+<header>
+  <nav id="main-navbar" class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Afri<span>Talent</span></a>
+      <button class="navbar-toggler" type="button"
+              data-bs-toggle="collapse" data-bs-target="#navMenu"
+              aria-controls="navMenu" aria-expanded="false"
+              aria-label="Ouvrir le menu de navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto align-items-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+          <li class="nav-item"><a class="nav-link active" href="freelances.html">Freelances</a></li>
+          <li class="nav-item"><a class="nav-link" href="tarifs.html">Tarifs</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">À propos</a></li>
+          <li class="nav-item"><a class="nav-link" href="tarifs.html#faq">FAQ</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item">
+            <button id="theme-toggle" class="btn btn-sm ms-2" aria-label="Passer en mode sombre">
+              <i class="bi bi-moon-fill" aria-hidden="true"></i>
+            </button>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="btn-navbar-cta ms-2">Rejoindre AfriTalent</a>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
- </nav>
- </ul> 
- </div> 
- </div> 
- </nav> 
+  </nav>
 </header>
-<section>
-
-    <article>
-        <img src="images/abdoul.webp" alt="Développeur Full Stack">
-        <h3>Mamadou Diop</h3>
-        <p>Développeur Full Stack</p>
-        <p>25€/h</p>
-    </article>
-
-    <article>
-        <img src="images/sophie freelance.jpg" alt="Designer UI UX">
-        <h3>Awa Ndiaye</h3>
-        <p>Designer UI/UX</p>
-        <p>20€/h</p>
-    </article>
-
-    <article>
-        <img src="images/Jerome Frrelance.webp" alt="Data Analyst"> 
-        <h3>Ibrahima Fall</h3>
-        <p>Data Analyst</p>
-        <p>30€/h</p>
-    </article>
-    <article>
-    <img src="images/Travailleur en remote.jpg" alt="Développeuse Mobile">
-
-    <h3>Sophie</h3>
-
-    <p>Développeuse Mobile</p>
-
-    <p>Spécialiste Android et Flutter avec 5 ans d'expérience.</p>
-
-    <p>28€/h</p>
-</article>
-<article>
-    <img src="images/andre freelance.webp" alt="DevOps Engineer">
-    <h3>Andre Sarr</h3>
-    <p>DevOps Engineer</p>
-    <p>Automatisation du déploiement et gestion des infrastructures cloud.</p>
-    <p>35€/h</p>
-</article>
-
-<article>
-    <img src="images/web designer.jpg" alt="Rédactrice Technique">
-    <h3>Patrick</h3>
-    <p>Rédacteur Technique</p>
-    <p>Rédaction de documentations, guides et contenus spécialisés IT.</p>
-    <p>18€/h</p>
-</article>
-
-<article>
-    <img src="images/freelance.avif" alt="Expert Cybersécurité">
-    <h3>Ousmane Kane</h3>
-    <p>Expert Cybersécurité</p>
-    <p>Protection des systèmes et audits de sécurité informatique.</p>
-    <p>40€/h</p>
-</article>
-
-<article>
-    <img src="images/African Freelance.jpg" alt="Community Manager">
-    <h3>Jean Sow</h3>
-    <p>Community Manager</p>
-    <p>Gestion des réseaux sociaux et stratégie de communication digitale.</p>
-    <p>15€/h</p>
-</article>
-
-<article>
-    <img src="images/Moussa.webp" alt="Ingénieur IA">
-    <h3>Moussa Cissé</h3>
-    <p>Ingénieur IA & Machine Learning</p>
-    <p>Création de modèles d'intelligence artificielle et d'automatisation.</p>
-    <p>45€/h</p>
-</article>
-
-<article>
-    <img src="images/Fatou.webp" alt="Développeuse Front-End">
-    <h3>Khadija Faye</h3>
-    <p>Développeuse Front-End</p>
-    <p>Création d'interfaces web responsives avec HTML, CSS et JavaScript.</p>
-    <p>22€/h</p>
-</article>
-
-</section>
-</html
+ 
+<main>
+ 
+  <!-- En-tête de page -->
+  <section class="section" style="background-color: var(--color-secondary); padding-top: 7rem; padding-bottom: 3rem;">
+    <div class="container text-center">
+      <span class="section-label">Nos talents</span>
+      <h1 style="color: #fff; font-family: var(--font-heading);">Catalogue des Freelances</h1>
+      <p style="color: rgba(255,255,255,0.7); max-width: 520px; margin: 0 auto;">
+        Découvrez nos freelances certifiés. Filtrez par catégorie pour trouver le profil qu'il vous faut.
+      </p>
+    </div>
+  </section>
+ 
+  <!-- Barre de filtres + grille -->
+  <section class="section">
+    <div class="container">
+ 
+      <!-- Barre de filtres — id="filter-bar" ciblé par le JS -->
+      <div id="filter-bar" class="mb-4">
+        <button data-filter="all" class="active">Tous</button>
+        <button data-filter="dev">Développement Web</button>
+        <button data-filter="design">Design UI/UX</button>
+        <button data-filter="marketing">Marketing Digital</button>
+        <button data-filter="data">Data &amp; IA</button>
+        <button data-filter="redaction">Rédaction Tech</button>
+        <button data-filter="devops">DevOps &amp; Cloud</button>
+      </div>
+ 
+      <!-- Grille des freelances -->
+      <!-- data-category ciblé par le JS pour le filtrage -->
+      <div class="freelances-grid">
+ 
+        <!-- Freelance 1 -->
+        <div class="freelance-card" data-category="dev">
+          <img src="images/abdoul.webp" class="freelance-avatar" width="72" height="72" alt="Photo de Abdoul Diop">
+          <p class="freelance-name">Abdoul Diop</p>
+          <p class="freelance-specialty">Développeur Full Stack</p>
+          <p class="freelance-bio">Spécialiste React & Node.js avec 5 ans d'expérience en startups africaines.</p>
+          <div class="freelance-meta">
+            <span class="freelance-rate">15.0000fcfa/h</span>
+            <span class="freelance-rating">★★★★★ (4.9)</span>
+          </div>
+          <a href="#" class="btn-freelance">Voir le profil</a>
+        </div>
+ 
+        <!-- Freelance 2 -->
+        <div class="freelance-card" data-category="design">
+          <img src="images/Fatou.webp" class="freelance-avatar" width="72" height="72" alt="Photo de Fatou Ndiaye">
+          <p class="freelance-name">Fatou Ndiaye</p>
+          <p class="freelance-specialty">Designer UI/UX</p>
+          <p class="freelance-bio">Créatrice d'interfaces intuitives et d'identités visuelles percutantes.</p>
+          <div class="freelance-meta">
+            <span class="freelance-rate">18.0000fcfa/h</span>
+            <span class="freelance-rating">★★★★★ (5.0)</span>
+          </div>
+          <a href="#" class="btn-freelance">Voir le profil</a>
+        </div>
+ 
+        <!-- Freelance 3 -->
+        <div class="freelance-card" data-category="data">
+          <img src="images/Jerome Frrelance.webp" class="freelance-avatar" width="72" height="72" alt="Photo de Jerome">
+          <p class="freelance-name">Jerome</p>
+          <p class="freelance-specialty">Data Scientist</p>
+          <p class="freelance-bio">Expert Python, machine learning et visualisation de données pour entreprises.</p>
+          <div class="freelance-meta">
+            <span class="freelance-rate">40.0000fcfa/h</span>
+            <span class="freelance-rating">★★★★☆ (4.7)</span>
+          </div>
+          <a href="#" class="btn-freelance">Voir le profil</a>
+        </div>
+ 
+        <!-- Freelance 4 -->
+        <div class="freelance-card" data-category="marketing">
+          <img src="images/Moussa.webp" class="freelance-avatar" width="72" height="72" alt="Photo de Moussa">
+          <p class="freelance-name">Moussa</p>
+          <p class="freelance-specialty">Marketing Digital</p>
+          <p class="freelance-bio">Stratégiste réseaux sociaux et SEO, spécialisée dans le marché africain.</p>
+          <div class="freelance-meta">
+            <span class="freelance-rate">20.0000fcfa/h</span>
+            <span class="freelance-rating">★★★★★ (4.8)</span>
+          </div>
+          <a href="#" class="btn-freelance">Voir le profil</a>
+        </div>
+ 
+        <!-- Freelance 5 -->
+        <div class="freelance-card" data-category="devops">
+          <img src="images/web designer.jpg" class="freelance-avatar" width="72" height="72" alt="Photo de Jordan">
+          <p class="freelance-name">Jordan</p>
+          <p class="freelance-specialty">DevOps & Cloud</p>
+          <p class="freelance-bio">Architecte cloud AWS/GCP, CI/CD, Docker et Kubernetes pour équipes agiles.</p>
+          <div class="freelance-meta">
+            <span class="freelance-rate">40.000fcfa/h</span>
+            <span class="freelance-rating">★★★★☆ (4.6)</span>
+          </div>
+          <a href="#" class="btn-freelance">Voir le profil</a>
+        </div>
+ 
+        <!-- Freelance 6 -->
+        <div class="freelance-card" data-category="redaction">
+          <img src="images/Travailleur en remote.jpg" class="freelance-avatar" width="72" height="72" alt="Photo de Mariama Diallo">
+          <p class="freelance-name">Mariama Diallo</p>
+          <p class="freelance-specialty">Rédactrice Tech</p>
+          <p class="freelance-bio">Rédactrice spécialisée en contenu tech, tutoriels et documentation API.</p>
+          <div class="freelance-meta">
+            <span class="freelance-rate">19.0000fcfa/h</span>
+            <span class="freelance-rating">★★★★★ (4.9)</span>
+          </div>
+          <a href="#" class="btn-freelance">Voir le profil</a>
+        </div>
+ 
+        <!-- Freelance 7 -->
+        <div class="freelance-card" data-category="dev">
+          <img src="images/software engeener.jpg" class="freelance-avatar" width="72" height="72" alt="Photo de Dimitri">
+          <p class="freelance-name">Dimitri</p>
+          <p class="freelance-specialty">Développeur Mobile</p>
+          <p class="freelance-bio">Expert Flutter & React Native, applications mobiles iOS et Android.</p>
+          <div class="freelance-meta">
+            <span class="freelance-rate">30.000fcfa/h</span>
+            <span class="freelance-rating">★★★★☆ (4.5)</span>
+          </div>
+          <a href="#" class="btn-freelance">Voir le profil</a>
+        </div>
+ 
+        <!-- Freelance 8 -->
+        <div class="freelance-card" data-category="design">
+          <img src="images/sophie freelance.jpg" class="freelance-avatar" width="72" height="72" alt="Photo de Sophie Kouassi">
+          <p class="freelance-name">Sophie Kouassi</p>
+          <p class="freelance-specialty">Graphiste & Illustratrice</p>
+          <p class="freelance-bio">Identités visuelles, illustrations et motion design pour marques africaines.</p>
+          <div class="freelance-meta">
+            <span class="freelance-rate">14.000fcfa/h</span>
+            <span class="freelance-rating">★★★★★ (5.0)</span>
+          </div>
+          <a href="#" class="btn-freelance">Voir le profil</a>
+        </div>
+ 
+        <!-- Freelance 9 -->
+        <div class="freelance-card" data-category="data">
+          <img src="images/andre freelance.webp" class="freelance-avatar" width="72" height="72" alt="Photo de Andre Camara">
+          <p class="freelance-name">Andre Camara</p>
+          <p class="freelance-specialty">Analyste BI & Data</p>
+          <p class="freelance-bio">Tableaux de bord Power BI, SQL avancé et reporting pour PME et grands comptes.</p>
+          <div class="freelance-meta">
+            <span class="freelance-rate">32.000fcfa/h</span>
+            <span class="freelance-rating">★★★★☆ (4.7)</span>
+          </div>
+          <a href="#" class="btn-freelance">Voir le profil</a>
+        </div>
+ 
+      </div><!-- /.freelances-grid -->
+    </div>
+  </section>
+ 
+</main>
+ 
+<footer class="pt-5 pb-3" style="background-color: var(--color-secondary); color: rgba(255,255,255,0.75);">
+  <div class="container">
+    <div class="row gy-4">
+      <div class="col-lg-3 col-md-6">
+        <p class="fw-bold fs-5" style="font-family: var(--font-heading); color: #fff;">Afri<span style="color: var(--color-primary);">Talent</span></p>
+        <p style="font-size: 0.9rem;">La plateforme de référence pour les freelances tech en Afrique.</p>
+        <div class="d-flex gap-3 mt-2">
+          <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x fs-5" style="color: var(--color-primary);"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin fs-5" style="color: var(--color-primary);"></i></a>
+          <a href="#" aria-label="Instagram"><i class="bi bi-instagram fs-5" style="color: var(--color-primary);"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <p class="fw-bold" style="color: #fff;">Liens utiles</p>
+        <ul class="list-unstyled" style="font-size: 0.9rem;">
+          <li><a href="index.html" style="color: rgba(255,255,255,0.7);">Accueil</a></li>
+          <li><a href="freelances.html" style="color: rgba(255,255,255,0.7);">Freelances</a></li>
+          <li><a href="tarifs.html" style="color: rgba(255,255,255,0.7);">Tarifs</a></li>
+          <li><a href="about.html" style="color: rgba(255,255,255,0.7);">À propos</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <p class="fw-bold" style="color: #fff;">Ressources</p>
+        <ul class="list-unstyled" style="font-size: 0.9rem;">
+          <li><a href="tarifs.html#faq" style="color: rgba(255,255,255,0.7);">FAQ</a></li>
+          <li><a href="#" style="color: rgba(255,255,255,0.7);">Guide du freelance</a></li>
+          <li><a href="#" style="color: rgba(255,255,255,0.7);">Conditions d'utilisation</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <p class="fw-bold" style="color: #fff;">Contact</p>
+        <ul class="list-unstyled" style="font-size: 0.9rem;">
+          <li><i class="bi bi-envelope-fill me-2" style="color: var(--color-primary);"></i>contact@afritalent.com</li>
+          <li class="mt-1"><i class="bi bi-telephone-fill me-2" style="color: var(--color-primary);"></i>+221 77 000 00 00</li>
+          <li class="mt-1"><i class="bi bi-geo-alt-fill me-2" style="color: var(--color-primary);"></i>Dakar, Sénégal</li>
+        </ul>
+      </div>
+    </div>
+    <hr style="border-color: rgba(255,255,255,0.15); margin-top: 2rem;">
+    <p class="text-center mb-0" style="font-size: 0.85rem;">&copy; <span id="year"></span> AfriTalent. Tous droits réservés.</p>
+  </div>
+</footer>
+ 
+<button id="back-to-top" aria-label="Retour en haut de la page">
+  <i class="bi bi-arrow-up" aria-hidden="true"></i>
+</button>
+ 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
