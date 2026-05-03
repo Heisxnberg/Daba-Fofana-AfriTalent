@@ -1050,3 +1050,33 @@ Position fixe en bas à droite. */
   background-color: #ea6b0f;
   transform: translateY(-3px);
 }
+/* commit 7 */
+
+/* État initial : invisible et légèrement décalé vers le bas */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.65s ease,
+              transform 0.65s ease;
+}
+ 
+/* État final : visible, en place */
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+ 
+/* Délais en cascade pour les éléments enfants (effet "stagger") */
+.fade-in-section:nth-child(1) { transition-delay: 0s;    }
+.fade-in-section:nth-child(2) { transition-delay: 0.1s;  }
+.fade-in-section:nth-child(3) { transition-delay: 0.2s;  }
+.fade-in-section:nth-child(4) { transition-delay: 0.3s;  }
+ 
+/* Respect des préférences de mouvement réduit */
+@media (prefers-reduced-motion: reduce) {
+  .fade-in-section {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
