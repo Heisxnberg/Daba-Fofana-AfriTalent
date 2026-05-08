@@ -1080,3 +1080,293 @@ Position fixe en bas à droite. */
     transition: none;
   }
 }
+/* commit 8 */
+/* Barre de filtres */
+#filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+  margin-bottom: var(--spacing-md);
+}
+ 
+/* Bouton de filtre */
+#filter-bar [data-filter] {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.4rem 1.1rem;
+  border: 2px solid rgba(0, 0, 0, 0.12);
+  border-radius: 99px; /* Pill */
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  cursor: pointer;
+  transition: background-color var(--transition-fast),
+              color var(--transition-fast),
+              border-color var(--transition-fast);
+}
+ 
+/* Bouton de filtre actif */
+#filter-bar [data-filter].active,
+#filter-bar [data-filter]:hover {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #FFFFFF;
+}
+ 
+/* Grille des cartes freelances */
+.freelances-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 colonnes desktop */
+  gap: 1.5rem;
+}
+ 
+@media (max-width: 991px) {
+  .freelances-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 colonnes tablette */
+  }
+}
+ 
+@media (max-width: 575px) {
+  .freelances-grid {
+    grid-template-columns: 1fr; /* 1 colonne mobile */
+  }
+}
+ 
+/* Carte freelance */
+.freelance-card {
+  background-color: var(--color-surface);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-sm);
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  box-shadow: var(--shadow-sm);
+ 
+  /* Transition pour l'apparition/disparition lors du filtrage */
+  transition: opacity 0.3s ease,
+              transform 0.3s ease,
+              box-shadow var(--transition-normal);
+}
+ 
+.freelance-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+}
+ 
+/* Carte en cours de masquage (JS lui ajoute .card-hidden) */
+.freelance-card.card-hidden {
+  opacity: 0;
+  transform: scale(0.95);
+}
+ 
+/* Carte visible */
+.freelance-card.card-visible {
+  opacity: 1;
+  transform: scale(1);
+}
+ 
+/* Photo du freelance */
+.freelance-avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--color-primary);
+  margin-bottom: var(--spacing-xs);
+}
+ 
+/* Nom du freelance */
+.freelance-name {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-secondary);
+  margin-bottom: 0.1rem;
+}
+ 
+/* Spécialité */
+.freelance-specialty {
+  font-size: 0.85rem;
+  color: var(--color-primary);
+  font-weight: 600;
+  margin-bottom: var(--spacing-xs);
+}
+ 
+/* Bio courte */
+.freelance-bio {
+  font-size: 0.88rem;
+  color: var(--color-text);
+  opacity: 0.8;
+  margin-bottom: var(--spacing-xs);
+  line-height: 1.5;
+}
+ 
+/* Ligne tarif + note */
+.freelance-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-sm);
+  font-size: 0.88rem;
+}
+ 
+.freelance-rate {
+  font-weight: 700;
+  color: var(--color-secondary);
+}
+ 
+.freelance-rating {
+  color: var(--color-primary);
+}
+ 
+/* Bouton "Voir le profil" */
+.btn-freelance {
+  width: 100%;
+  font-size: 0.9rem;
+  font-weight: 600;
+  background-color: var(--color-primary);
+  color: #FFFFFF;
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 0.5rem 1rem;
+  transition: background-color var(--transition-fast),
+              transform var(--transition-fast);
+}
+ 
+.btn-freelance:hover {
+  background-color: #ea6b0f;
+  transform: translateY(-1px);
+  color: #FFFFFF;
+}
+ 
+/* -----------------------------------------------------------
+   FORMULAIRE DE CONTACT
+   ----------------------------------------------------------- */
+ 
+/* Conteneur du formulaire */
+.contact-form-wrapper {
+  background-color: var(--color-surface);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-md);
+  box-shadow: var(--shadow-md);
+}
+ 
+/* Labels */
+.contact-form-wrapper .form-label {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--color-secondary);
+  margin-bottom: 0.3rem;
+}
+ 
+/* Champs texte et select */
+.contact-form-wrapper .form-control,
+.contact-form-wrapper .form-select {
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: var(--radius-sm);
+  padding: 0.65rem 1rem;
+  font-size: 0.95rem;
+  color: var(--color-text);
+  transition: border-color var(--transition-fast),
+              box-shadow var(--transition-fast);
+}
+ 
+.contact-form-wrapper .form-control:focus,
+.contact-form-wrapper .form-select:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.2);
+  outline: none;
+}
+ 
+/* Champ valide (Bootstrap is-valid surchargé) */
+.contact-form-wrapper .form-control.is-valid,
+.contact-form-wrapper .form-select.is-valid {
+  border-color: #27AE60;
+  box-shadow: 0 0 0 3px rgba(39, 174, 96, 0.15);
+}
+ 
+/* Champ invalide (Bootstrap is-invalid surchargé) */
+.contact-form-wrapper .form-control.is-invalid,
+.contact-form-wrapper .form-select.is-invalid {
+  border-color: #E74C3C;
+  box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.15);
+}
+ 
+/* Message d'erreur sous le champ */
+.invalid-feedback {
+  display: block; /* Toujours affiché (Bootstrap le cache par défaut) */
+  font-size: 0.82rem;
+  color: #E74C3C;
+  margin-top: 0.3rem;
+}
+ 
+/* Bouton d'envoi du formulaire */
+.btn-contact-submit {
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 700;
+  background-color: var(--color-primary);
+  color: #FFFFFF;
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 0.85rem;
+  transition: background-color var(--transition-fast),
+              transform var(--transition-fast);
+}
+ 
+.btn-contact-submit:hover {
+  background-color: #ea6b0f;
+  transform: translateY(-2px);
+}
+ 
+/* Message de succès (caché par défaut via Bootstrap d-none) */
+#form-success {
+  background-color: #D4EDDA;
+  border: 1px solid #C3E6CB;
+  border-radius: var(--radius-md);
+  padding: var(--spacing-sm) var(--spacing-md);
+  color: #155724;
+  font-weight: 600;
+  text-align: center;
+  margin-top: var(--spacing-sm);
+}
+ 
+/* Informations de contact à côté du formulaire */
+.contact-info {
+  padding: var(--spacing-sm) 0;
+}
+ 
+.contact-info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-sm);
+}
+ 
+.contact-info-icon {
+  font-size: 1.4rem;
+  color: var(--color-primary);
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+ 
+.contact-info-text strong {
+  display: block;
+  font-weight: 700;
+  color: var(--color-secondary);
+  font-size: 0.9rem;
+}
+ 
+.contact-info-text span {
+  font-size: 0.9rem;
+  color: var(--color-text);
+  opacity: 0.8;
+}
+ 
+/* iframe Google Maps */
+.contact-map iframe {
+  width: 100%;
+  height: 300px;
+  border-radius: var(--radius-md);
+  border: none;
+  margin-top: var(--spacing-md);
+}
