@@ -1,3 +1,30 @@
 .DS_Store
 Thumbs.db
+node_modules/# =============================================================
+# AfriTalent — .gitignore
+# Fichiers et dossiers à exclure du versioning Git
+# =============================================================
+ 
+# --- Systèmes d'exploitation ---
+.DS_Store          # macOS : métadonnées de dossiers
+Thumbs.db          # Windows : cache d'aperçu d'images
+desktop.ini        # Windows : config d'affichage de dossiers
+ 
+# --- Éditeurs de code ---
+.vscode/           # VS Code : paramètres locaux (extensions, debug)
+.idea/             # JetBrains : paramètres locaux
+*.suo              # Visual Studio : fichiers utilisateur
+*.user
+ 
+# --- Fichiers temporaires ---
+*.log              # Fichiers de logs
+*.tmp              # Fichiers temporaires
+*.bak              # Sauvegardes automatiques
+ 
+# --- Node.js (si utilisé pour des outils locaux) ---
 node_modules/
+npm-debug.log*
+ 
+# --- Fichiers sensibles (ne jamais versionner) ---
+.env               # Variables d'environnement (clés API, mots de passe)
+.env.local
