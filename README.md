@@ -10,7 +10,7 @@ Projet individuel — Semestre 2 · Groupe ISI · Par Daba Fofana  Classe l1rt
 
 AfriTalent est un site vitrine complet développé en HTML5, CSS3 et JavaScript vanilla dans le cadre du projet de fin de Semestre 2.
 Il présente une plateforme fictive permettant aux freelances tech (développeurs, designers, data analysts…) de proposer leurs services, et aux entreprises de trouver les bons profils pour leurs missions.
-Le design suit les tendances web 2026 : Bento Grid, typographie expressive, dark mode, animations au scroll et interactivité JavaScript sans framework.
+Le design suit les tendances web i2026 : Bento Grid, typographie expressive, dark mode, animations au scroll et interactivité JavaScript sans framework.
 
 les technos ; 
 - HTML5           Structure sémantique, accessibilité (alt, aria-label)
@@ -26,7 +26,7 @@ les principals fonctionnalités du site :
  Filtrage dynamique: catalogue freelances filtré par catégorie sans rechargement
   Navbar dynamique: change de style au scroll + bouton "Retour en haut"
   un apercu sur le screen a suivre :
-![Aperçu du site AfriTalent](images/image de l'accueuil du site.png)
+![Aperçu du site AfriTalent](images/imageaccueil.png)
 clone de ce projet : 
 ```bash
-git clone https://github.com/TON-Heisxnberg/Daba-Fofana-AfriTalent.git
+git clone https://github.com/Heisxnberg/Daba-Fofana-AfriTalent.git
